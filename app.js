@@ -23,7 +23,7 @@
                 temperature.innerText = Math.round(1.8 * (data.main.temp - 273) + 32) + " °C";
                 windspeed.innerText = Math.round(data.wind.speed * 1.60933999997536) + " kph";
                 visibility.innerText = Math.round(data.visibility / 1000);
-                console.log(data.main);
+
             }).catch(function() {});
     }
     btn.addEventListener('click', function() {
