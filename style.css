@@ -6,12 +6,7 @@ body {
     background-repeat: no-repeat;
     margin: 0 auto;
     color: white;
-}
-
-section {
     position: relative;
-    width: 40%;
-    margin: 0 auto;
 }
 
 .row {
@@ -24,8 +19,13 @@ section {
     margin-left: 0px;
 }
 
+#box-container {
+    text-align: center;
+}
+
 .box-1 {
-    position: absolute;
+    margin: 0 auto;
+    position: relative;
     width: 500px;
     height: 275px;
     top: 25px;
@@ -36,13 +36,14 @@ section {
 }
 
 .box-2 {
-    top: 350px;
+    margin: 0 auto;
+    margin-top: 54px;
     border-radius: 8px;
     width: 500px;
     height: 150px;
     background-size: cover;
     background-color: rgba(31, 34, 118, 0.5);
-    position: absolute;
+    position: relative;
 }
 
 #group {
@@ -100,4 +101,51 @@ section {
     font-size: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+.lds-hourglass {
+    display: inline-block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+}
+
+.lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 6px;
+    box-sizing: border-box;
+    border: 26px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-hourglass 1.2s infinite;
+}
+
+@keyframes lds-hourglass {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+        transform: rotate(1800deg);
+    }
+}
+
+.class_loader {
+    display: none;
+    background-color: rgba(31, 34, 118, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#loader-hourglass {
+    top: 50%;
 }
